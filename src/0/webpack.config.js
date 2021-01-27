@@ -4,7 +4,11 @@ module.exports = {
   output: {
     library: 'DomMapper',
     libraryExport: 'default',
-    libraryTarget: 'var',
+    libraryTarget: 'umd',
+    globalObject: 'this',
+//    library: 'DomMapper',
+//    libraryExport: 'default',
+//    libraryTarget: 'var',
     filename: 'DomMapper.js',
   },
   module: {
@@ -23,6 +27,8 @@ module.exports = {
                 // private # を使えるようにする
                 "@babel/plugin-proposal-class-properties",
                 "@babel/plugin-proposal-private-methods",
+                // asyncを使えるようにする
+                "@babel/plugin-transform-runtime",
               ],
             },
           },

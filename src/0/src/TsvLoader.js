@@ -1,4 +1,4 @@
-class TsvLoader {
+export default class TsvLoader {
     static #TSV_FIX_COL_NUM = 2; // TSVの固定列(query, target)数
     static async load(path) { // './tsv/map.tsv'
         return await this.#getTsv(path);
